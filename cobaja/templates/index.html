@@ -1,0 +1,18 @@
+<div class="login">
+    <h1>Predict CO2 Emission of Vehicles</h1>
+    <h3>Enter the following values to predict the CO2 emission from the vehicle</h3>
+    <form action="{{ url_for('predict')}}" method="post">
+        <input type="text" name="safe" placeholder="Children are safe among family members such as grandparents, uncles, aunts, cousins" required="required" />
+        <input type="text" name="cylinders" placeholder="Children are mainly abused by strangers in our society" required="required" />
+        <input type="text" name="fuel" placeholder="Male children dont need sexual abuse prevention knowledge" required="required" />
+        <input type="text" name="need" placeholder="Teaching sexual abuse prevention in school is not necessary. It will make children curious about sex" required="required" />
+        <input type="text" name="dont" placeholder="Do you know what child grooming is?" required="required" />
+        <input type="text" name="male" placeholder="Do you know what signs to look for to identify if your child has been abused?" required="required" />
+        <input type="text" name="abuse" placeholder="Do you think children need post abuse counseling for recovering?" required="required" />
+        <input type="text" name="date" placeholder="Do you think you should take legal action against the abuser of your child?" required="required" />
+        <button type="submit" class="btn">Predict</button>
+    </form>
+    <br>
+    <br>
+    {{ prediction_text }}
+</div>
